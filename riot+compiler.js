@@ -665,7 +665,7 @@ function Tag(impl, conf, innerHTML) {
   // it could be handy to use it also to improve the virtual dom rendering speed
   this._id = ~~(new Date().getTime() * Math.random())
 
-  extend(this, { parent: parent, root: root, opts: opts, tags: {} }, item)
+  extend(this, { parent: parent, dom: innerHTML, root: root, opts: opts, tags: {} }, item)
 
   // grab attributes
   each(root.attributes, function(el) {
